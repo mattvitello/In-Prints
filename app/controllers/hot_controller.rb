@@ -1,0 +1,2 @@
+class HotController < ApplicationController
+end

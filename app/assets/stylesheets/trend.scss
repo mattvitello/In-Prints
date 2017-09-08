@@ -1,0 +1,450 @@
+// Place all the styles related to the trend controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+footer{
+  display:none;
+}
+.fixed.top{
+  left: inherit !important;
+}
+#merch-normal{
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  letter-spacing: .4px;
+  font-size:17px;
+  line-height: 15.5px;
+  text-transform: uppercase;
+}
+.stick{
+  position:fixed;
+  top:0px;
+  z-index:99;
+}
+#merch-hashtag{
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  letter-spacing: .4px;
+  font-size:17px;
+  line-height: 15.5px;
+  text-transform: none;
+}
+#price{
+  font-size: 13px;
+  font-style: normal;
+  line-height: 15.5px;
+  margin-bottom: 0em;
+  font-weight: normal;
+  letter-spacing: .4px;
+}
+.center-block {
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+.trend-item{
+  margin: 0 auto;
+}
+.black-shirt, .white-shirt, .gray-shirt{
+  display: block;
+}
+
+@media (min-width: 0px){
+  .shop-sidebar{
+    position:relative;
+    margin-top:0px;
+  }
+  .shop-items{
+    margin-left:0px;
+    margin-top:0px;
+  }
+  .trend-items{
+    position: relative;
+    padding-bottom: 0px;
+  }
+  .trend-buy{
+    padding-top: 0;
+    margin-left: 0%;
+  }
+  .header {
+    position: relative;
+  }
+  /////////////////
+  .trend-items{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: #f2f2f2;
+  }
+  .trend-buy{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .trend-item{
+    width: 200px;
+  }
+  .trend-buy{
+    margin-top:40px
+  }
+  .space .ui.selection.dropdown{
+    min-width: 90%;
+  }
+  .disp-table{
+    max-width: 90%;
+  }
+  .item-shop{
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+}
+@media (min-width: 330px){
+  .trend-item{
+    width: 240px;
+  }
+}
+
+@media (min-width: 450px){
+  .trend-item{
+    width: 300px;
+  }
+}
+@media (min-width: 550px){
+  .trend-item{
+    width: 400px;
+  }
+}
+@media (min-width: 620px){
+  .trend-item{
+    width: 420px;
+  }
+}
+@media (min-width: 720px){
+  .shop-sidebar{
+    position: fixed;
+    margin-top: 62px;
+  }
+  .header{
+    position:fixed;
+    background-color: #fff;
+    z-index: 500;
+  }
+  .shop-items{
+    margin-left: 166px;
+    margin-top: 62px;
+  }
+  .trend-items{
+    position:fixed;
+    padding-bottom:100%;
+  }
+
+
+  .trend-items{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 44%;
+    -ms-flex: 0 0 44%;
+    flex: 0 0 44%;
+    max-width: 44%;
+  }
+  .trend-buy{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 41.666667%;
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    padding-top:1.5rem;
+    margin-left: 58.333333%;
+  }
+  .trend-item{
+    width: 225px;
+    margin-bottom:0px;
+  }
+  .trend-buy{
+    margin-top:5px;
+  }
+  .space .ui.selection.dropdown{
+    min-width: 12.6em;
+  }
+  .disp-table{
+    max-width: 294px;
+  }
+}
+@media (min-width: 730px){
+  .space .ui.selection.dropdown{
+    min-width: 13em;
+  }
+}
+@media (min-width: 750px){
+  .space .ui.selection.dropdown{
+    min-width: 13.5em;
+  }
+}
+@media (min-width: 770px){
+  .space .ui.selection.dropdown{
+    min-width: 14em;
+  }
+  .trend-item{
+    width: 250px;
+  }
+}
+@media (min-width: 790px){
+  .space .ui.selection.dropdown{
+    min-width: 14.5em;
+  }
+}
+@media (min-width: 791px){
+  .trend-items{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 45.5%;
+    -ms-flex: 0 0 45.5%;
+    flex: 0 0 45.5%;
+    max-width: 45.5%;
+  }
+}
+@media (min-width: 810px){
+  .space .ui.selection.dropdown{
+    min-width: 15em;
+  }
+}
+@media (min-width: 830px){
+  .space .ui.selection.dropdown{
+    min-width: 15.5em;
+  }
+  .trend-item{
+    width: 300px;
+  }
+}
+@media (min-width: 850px){
+  .space .ui.selection.dropdown{
+    min-width: 16em;
+  }
+}
+@media (min-width: 870px){
+  .space .ui.selection.dropdown{
+    min-width: 16.5em;
+  }
+}
+@media (min-width: 950px){
+  .trend-item{
+    width: 350px;
+  }
+}
+@media (min-width: 1010px){
+  .trend-items{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 47.5%;
+    -ms-flex: 0 0 47.5%;
+    flex: 0 0 47.5%;
+    max-width: 47.5%;
+  }
+}
+@media (min-width: 1080px){
+  .trend-item{
+    width: 400px;
+  }
+  .trend-item.sweatshirt{
+    width: 390px;
+  }
+}
+@media (min-width: 1130px){
+  .trend-item{
+    width: 450px;
+  }
+  .trend-item.sweatshirt{
+    width: 390px;
+  }
+}
+@media (min-width: 1215px){
+  .trend-item{
+    width: 490px;
+  }
+  .trend-item.sweatshirt{
+    width: 390px;
+  }
+}
+@media (min-width: 1400px){
+  .trend-item{
+    width: 550px;
+  }
+  .trend-item.sweatshirt{
+    width: 450px;
+  }
+}
+@media (min-width: 1600px){
+  .trend-item{
+    width: 600px;
+  }
+  .trend-item.sweatshirt{
+    width: 500px;
+  }
+}
+@media (min-width: 1900px){
+  .trend-item{
+    width: 680px;
+  }
+  .trend-item.sweatshirt{
+    width: 580px;
+  }
+}
+
+@media (min-width: 2300px){
+  .trend-item{
+    width: 770px;
+  }
+  .trend-item.sweatshirt{
+    width: 670px;
+  }
+}
+
+.space{
+  margin-bottom:20px;
+  width:100%;
+  .ui.selection.dropdown{
+    margin-left:15px;
+    line-height: 0em;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    min-height:0px;
+    padding: 0.6em 2.1em 0.6em 0.6em;
+    border-radius:0rem;
+
+    .default.text, .item, .text{
+      font-size: 10px;
+      font-style: normal;
+      line-height: 15.5px;
+      list-style: none;
+    }
+    .menu{
+      .item{
+        padding: 0.6rem 0.6rem !important;
+      }
+    }
+
+    .dropdown.icon{
+      padding:0.6em;
+    }
+  }
+  .ui.selection.active.dropdown .menu{
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.shirt-text-shop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  width: 105px;
+  margin: auto;
+  overflow: hidden;
+  font-weight: 300;
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.62);
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.size-btn{
+  height:28px;
+  width:64px;
+  border-radius:0px;
+  margin-right:5px;
+  font-size:.8em;
+
+  cursor:pointer;
+
+  background-color: #ffffff;
+  border:1px solid #b3b4b5;
+  color: #414141;
+
+  text-align:center;
+  vertical-align: middle;
+  display:inline-block;
+  padding-top:2px;
+}
+
+.size-btn:hover{
+  border:1px solid #000000;
+  color:#000000;
+  font-weight:500;
+}
+
+.buy-btn{
+  height:32px;
+  width:100%;
+  border-radius: 0px;
+  margin-right:5px;
+  font-size:.8em;
+
+  cursor:pointer;
+
+  background-color: #000000;
+  color: #e5e6e7;
+
+  text-align:center;
+  vertical-align: middle;
+  display:inline-block;
+}
+
+.buy-btn:hover{
+  background-color: #565656;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.space{
+  margin-top:20px;
+}
+
+.disp-table{
+  display:table;
+  overflow:hidden;
+}
+
+.disp-table-cell{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.custom-select{
+  border-radius:0px;
+  font-size:.8em;
+  height:28px;
+  display:inline-block;
+}
+
+.selector{
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  margin-bottom: 2px;
+}
+
+.fa-envelope:hover{
+  color: #565656;
+}
+.fa-twitter:hover{
+  color: #565656;
+
+}
+.fa-facebook:hover{
+  color: #565656;
+}
+
+.similar-item{
+  margin-bottom:3em;
+  margin-right:20px;
+}

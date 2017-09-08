@@ -1,0 +1,264 @@
+<%= stylesheet_link_tag 'trend'%>
+
+
+<div class="row" style="width:100%">
+  <!--Sidebar Menu-->
+  <div class="col-md-2 shop-sidebar">
+    <ul class="shop-menu" id="menu1">
+      <li class="shop-menu-item">
+        <a href="/new/">NEW</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/hot">HOT</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/top/">TOP</a>
+      </li>
+    </ul>
+    <ul class="shop-menu" id="menu2">
+      <li class="shop-menu-item">
+        <a href="/new">SHIRTS</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/new/sweatshirts">SWEATSHIRTS</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/new/hats">HATS</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/new/wallart">WALL ART</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-10 shop-items">
+    <div class="row" style="padding-bottom:20px;">
+      <% if FileTest.exist?("public/images/#{@folder}/shirts/w1.png") %>
+          <div class="col-7 trend-items">
+            <div class="item-shop" style="margin-left:31px; margin-right:31px">
+              <a class="shirt-img-shop">
+                <% if @type == "tee" %>
+                    <%= image_tag("/images/#{@folder}/shirts/w1.png", :class => "white-shirt trend-item", :style => "display: block") %>
+                    <%= image_tag("/images/#{@folder}/shirts/b1.png", :class => "black-shirt trend-item", :style => "display: none") %>
+                    <%= image_tag("/images/#{@folder}/shirts/g1.png", :class => "gray-shirt trend-item", :style => "display: none") %>
+                <% elsif @type == "crew" %>
+                    <%= image_tag("/images/#{@folder}/crewnecks/w1.png", :class => "white-shirt trend-item sweatshirt", :style => "display: block") %>
+                    <%= image_tag("/images/#{@folder}/crewnecks/b1.png", :class => "black-shirt trend-item sweatshirt", :style => "display: none") %>
+                    <%= image_tag("/images/#{@folder}/crewnecks/g1.png", :class => "gray-shirt trend-item sweatshirt", :style => "display: none") %>
+                <% elsif @type == "hoodie" %>
+                    <%= image_tag("/images/#{@folder}/hoodies/w1.png", :class => "white-shirt trend-item sweatshirt", :style => "display: block") %>
+                    <%= image_tag("/images/#{@folder}/hoodies/b1.png", :class => "black-shirt trend-item sweatshirt", :style => "display: none") %>
+                    <%= image_tag("/images/#{@folder}/hoodies/g1.png", :class => "gray-shirt trend-item sweatshirt", :style => "display: none") %>
+                <% end %>
+              </a>
+            </div>
+            <!--
+            <p style="font-size: 0.7em;padding-top:8em;"></p>
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/ConspiracySongs" data-width="665" data-chrome="nofooter noheader noborder" data-widget-id="856742077182337024">#ConspiracySongs
+              Tweets</a>
+              -->
+              <!--
+            <div class="item-shop" style="margin-left:31px;margin-right:31px">
+              <%= image_tag("shop/shirts/white_back_tee.png", :class => "back white-back active-back") %>
+              <%= image_tag("shop/shirts/black_back_tee.png", :class => "back black-back") %>
+              <%= image_tag("shop/shirts/gray_back_tee.png", :class => "back gray-back") %>
+            </div>
+            -->
+          </div>
+      <% else %>
+          <div class="col-7 trend-items">
+            <div class="item-shop" style="margin-left:31px;margin-right:31px">
+              <p>Sorry, this item no longer exists</p>
+            </div>
+          </div>
+      <% end %>
+
+      <div class="col-5 trend-buy">
+        <div class="row">
+          <div class="name-price col">
+            <% if @name.include? "#" %>
+                <h3 id="merch-hashtag"><%= @name %></h3>
+            <% else %>
+                <h3 id="merch-normal"><%= @name %></h3>
+            <% end %>
+            <% if @type == "tee" %>
+                <p id="price">20 USD</p>
+            <% elsif @type == "crew" %>
+                <p id="price">30 USD</p>
+            <% elsif @type == "hoodie" %>
+                <p id="price">35 USD</p>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="row space" style="margin-top:35px;">
+          <div class="ui selection dropdown color">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="text"><span class="selector" style="background-color: white;border: 1px solid black;"></span>WHITE</div>
+              <div class="menu">
+                <div class="item active selected" data-value="0" style="height:auto !important;">
+                  <span class="selector" style="background-color: white;border: 1px solid black;"></span>WHITE
+                </div>
+                <div class="item" data-value="1" style="height:auto !important;">
+                  <span class="selector" style="background-color: black;"></span>BLACK
+                </div>
+                <div class="item" data-value="2" style="height:auto !important;">
+                  <span class="selector" style="background-color: #abaaad;"></span>HEATHER GREY
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row space">
+          <div class="ui selection dropdown design">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="text">DESIGN 1</div>
+            <div class="menu">
+              <div class="item active selected" data-value="0" style="height:auto !important;">DESIGN 1</div>
+              <div class="item" data-value="1" style="height:auto !important;">DESIGN 2</div>
+              <div class="item" data-value="2" style="height:auto !important;">DESIGN 3</div>
+            </div>
+          </div>
+        </div>
+        <div class="row space">
+          <div class="ui selection dropdown size">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="text">M</div>
+            <div class="menu">
+              <div class="item" data-value="0" style="height:auto !important;">XS</div>
+              <div class="item" data-value="1" style="height:auto !important;">S</div>
+              <div class="item active selected" data-value="2" style="height:auto !important;">M</div>
+              <div class="item" data-value="3" style="height:auto !important;">L</div>
+              <div class="item" data-value="4" style="height:auto !important;">XL</div>
+              <div class="item" data-value="5" style="height:auto !important;">XXL</div>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div class="row space">
+          <div class="ui selection dropdown">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="text">1</div>
+            <div class="menu">
+              <div class="item" data-value="0" style="height:auto !important;">1</div>
+              <div class="item" data-value="1" style="height:auto !important;">2</div>
+              <div class="item active selected" data-value="2" style="height:auto !important;">3</div>
+              <div class="item" data-value="3" style="height:auto !important;">4</div>
+              <div class="item" data-value="4" style="height:auto !important;">5</div>
+            </div>
+          </div>
+        </div>
+        -->
+
+        <!--
+        <div class="row space">
+          <div class="select-container-shop col" style="left:0%; top:0%;">
+            <div class="select color white"></div>
+            <div class="select color gray"></div>
+            <div class="select color black"></div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:3px;">
+          <div class="select-container-shop col" style="left:0%; top:0%;">
+            <div class="select design1"></div>
+            <div class="select design2"></div>
+            <div class="select design3"></div>
+            <div class="select design4"></div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:15px;">
+          <div class="col">
+            <div class="size-btn"><span>small</span></div>
+            <div class="size-btn"><span>medium</span></div>
+            <div class="size-btn"><span>large</span></div>
+            <div class="size-btn"><span>x-large</span></div>
+          </div>
+        </div>
+
+-->
+        <div class="row">
+          <div class="col">
+            <span style="font-size:.8em; display:inline-block;">Quantity:</span>
+            <select class="custom-select">
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="1">4</option>
+              <option value="2">5</option>
+              <option value="3">6</option>
+              <option value="1">7</option>
+              <option value="2">8</option>
+              <option value="3">9</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" style="margin-top:40px;">
+          <div class="col-9 disp-table" style="">
+            <div class="buy-btn disp-table-cell" style=""><span>PURCHASE</span></div>
+          </div>
+        </div>
+        <hr style="margin-top:40px; margin-bottom:20px">
+        <span style="font-size: 0.7em">SHARE:&nbsp&nbsp</span>
+        <a href="" style="margin-right:8px"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="" style="margin-right:8px"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="" style="margin-right:8px"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <p></p>
+        <p style="font-size: 0.7em;margin-top:3em">SIMILAR ITEMS</p>
+        <div class="row">
+          <% if @type == "tee" %>
+              <div class="similar-item">
+                <a href="/trend?cat=new&id=<%=@id%>&type=crew">
+                  <%= image_tag("/images/#{@folder}/crewnecks/g1.png", :style => "display: block; width: 80px;") %>
+                </a>
+              </div>
+              <div class="similar-item">
+                <a href="/trend?cat=new&id=<%=@id%>&type=hoodie">
+                  <%= image_tag("/images/#{@folder}/hoodies/b1.png", :style => "display: block; width: 75px;") %>
+                </a>
+              </div>
+          <% elsif @type == "crew" %>
+              <div class="similar-item">
+                <a href="/trend?cat=new&id=<%=@id%>&type=tee">
+                  <%= image_tag("/images/#{@folder}/shirts/g1.png", :style => "display: block; width: 95px;") %>
+                </a>
+              </div>
+              <div class="similar-item">
+                <a href="/trend?cat=new&id=<%=@id%>&type=hoodie">
+                  <%= image_tag("/images/#{@folder}/hoodies/b1.png", :style => "display: block; width: 75px;") %>
+                </a>
+              </div>
+          <% elsif @type == "hoodie" %>
+              <div class="similar-item">
+                <a href="/trend?cat=new&id=<%=@id%>&type=crew">
+                  <%= image_tag("/images/#{@folder}/crewnecks/g1.png", :style => "display: block; width: 80px;") %>
+                </a>
+              </div>
+              <div class="similar-item">
+                <a href="/trend?cat=new&id=<%=@id%>&type=tee">
+                  <%= image_tag("/images/#{@folder}/shirts/b1.png", :style => "display: block; width: 95px;") %>
+                </a>
+              </div>
+          <% end %>
+        </div>
+        <% if @type == "tee" %>
+           <p style="font-size: 0.7em; text-transform: uppercase">This unisex t-shirt fits like a well-loved favorite designed with combed and ring-spun cotton.</p>
+           <p style="font-size: 0.7em;text-transform: uppercase;margin-bottom:3em;">White/Black: 100% cotton <br/>Heather Grey: 90% cotton, 10% polyester</p>
+        <% elsif @type == "crew" %>
+           <p style="font-size: 0.7em; text-transform: uppercase">This fleece crewneck sweatshirt contains double-needle stitching throughout and is designed with both cotton and polyester.</p>
+           <p style="font-size: 0.7em;text-transform: uppercase;margin-bottom:3em;">50% cotton, 50% polyester</p>
+        <% elsif @type == "hoodie" %>
+           <p style="font-size: 0.7em; text-transform: uppercase">THIS hooded SWEATSHIRT CONTAINS a Pouch pocket, Matching drawstring, and DOUBLE-NEEDLE STITCHING THROUGHOUT.</p>
+           <p style="font-size: 0.7em;text-transform: uppercase;margin-bottom:3em;">50% cotton, 50% polyester</p>
+        <% end %>
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/ConspiracySongs" data-width="665" data-chrome="nofooter noheader noborder" data-widget-id="856742077182337024">#ConspiracySongs
+          Tweets</a>
+
+      </div>
+    </div>
+  </div>
+</div>

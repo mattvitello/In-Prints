@@ -1,0 +1,175 @@
+<div class="row" style="width:100%">
+
+  <!--Sidebar Menu-->
+  <div class="col-md-2 shop-sidebar">
+    <ul class="shop-menu" id="menu1">
+      <li class="shop-menu-item active">
+        <a href="/new/sweatshirts">NEW</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/hot">HOT</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/top/sweatshirts">TOP</a>
+      </li>
+    </ul>
+    <ul class="shop-menu" id="menu2">
+      <li class="shop-menu-item">
+        <a href="/new">SHIRTS</a>
+      </li>
+      <li class="shop-menu-item active">
+        <a href="/new/sweatshirts">SWEATSHIRTS</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/new/hats">HATS</a>
+      </li>
+      <li class="shop-menu-item">
+        <a href="/new/wallart">WALL ART</a>
+      </li>
+    </ul>
+    <div id="sidebar-sort">
+      <p class="shop-menu-item" style="margin-bottom:3px;">CATEGORY</p>
+      <div class="ui selection dropdown sweatshirt">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="text">CREWNECKS</div>
+        <div class="menu">
+          <div class="item active selected" data-value="1" style="height:auto !important;">CREWNECKS</div>
+          <div class="item" data-value="0" style="height:auto !important;">HOODIES</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Merchandise-->
+  <div class="col-md-10 shop-items">
+    <div class="row">
+      <% i = 0 %>
+      <% @parsedName.each do |name| %>
+          <% if FileTest.exist?("public/images/#{@folderNames[i]}/crewnecks/w1.png") %>
+          <div class="col-md-3 iblock crewneck">
+            <div class="item-container">
+              <%link = "/trend?cat=new&id=" + @id[i] + "&type=crew"%>
+              <% r = rand(1...4) %>
+              <div class="merchitem">
+                <a class="shirt-img" href=<%= link %>>
+                  <% if r == 1 %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/w1.png", :class => "white-shirt crew", :style => "display: block", lazy: true, :alt => "") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/b1.png", :class => "black-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/g1.png", :class => "gray-shirt crew", :style => "display: none") %>
+
+                  <% elsif r == 2 %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/w1.png", :class => "white-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/b1.png", :class => "black-shirt crew", :style => "display: block", lazy: true, :alt => "") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/g1.png", :class => "gray-shirt crew", :style => "display: none") %>
+
+                  <% elsif r == 3 %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/w1.png", :class => "white-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/b1.png", :class => "black-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/crewnecks/g1.png", :class => "gray-shirt crew", :style => "display: block", lazy: true, :alt => "") %>
+
+                  <% end %>
+                </a>
+              </div>
+              <div style="display:inline; float:left;">
+                <% if @names[i].include? "#"%>
+                    <h3 class="hashtag"><%= @names[i] %></h3>
+                <% else %>
+                    <h3><%= @names[i] %></h3>
+                <%end%>
+                <p>30 USD</p>
+              </div>
+              <div class="select-container-shop" style="display:inline; float:right">
+                <div id="btn-wrap" class="designBtn">
+                  <div class="select design3" style="float:right"></div>
+                  <div class="sf-su-response sf-popup-panel popup">
+                    <div class="select design1" style="margin-right:10px"></div>
+                    <div class="select design2" style="margin-right:10px"></div>
+                    <div class="select design3" style="margin-right:0px"></div>
+                  </div>
+                </div>
+
+                <div id="btn-wrap" class="colorBtn" style="padding-left: 90px;">
+                  <%if r == 1 %>
+                      <div class="select color white" style="float:right"></div>
+                  <%elsif r == 2 %>
+                      <div class="select color black" style="float:right"></div>
+                  <%elsif r == 3 %>
+                      <div class="select color gray" style="float:right"></div>
+                  <% end %>
+                  <div class="sf-su-response sf-popup-panel popup">
+                    <div class="select color white" style="margin-right:10px"></div>
+                    <div class="select color gray" style="margin-right:10px"></div>
+                    <div class="select color black" style="margin-right:0px"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
+
+          <% if FileTest.exist?("public/images/#{@folderNames[i]}/hoodies/w1.png") %>
+          <div class="col-md-3 iblock hoodie" style="display:none">
+            <div class="item-container">
+              <%link = "/trend?cat=new&id=" + @id[i] + "&type=hoodie"%>
+              <% r = rand(1...4) %>
+              <div class="merchitem">
+                <a class="shirt-img" href=<%= link %>>
+                  <% if r == 1 %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/w1.png", :class => "white-shirt crew", :style => "display: block", lazy: true, :alt => "") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/b1.png", :class => "black-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/g1.png", :class => "gray-shirt crew", :style => "display: none") %>
+
+                  <% elsif r == 2 %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/w1.png", :class => "white-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/b1.png", :class => "black-shirt crew", :style => "display: block", lazy: true, :alt => "") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/g1.png", :class => "gray-shirt crew", :style => "display: none") %>
+
+                  <% elsif r == 3 %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/w1.png", :class => "white-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/b1.png", :class => "black-shirt crew", :style => "display: none") %>
+                      <%= image_tag("/images/#{@folderNames[i]}/hoodies/g1.png", :class => "gray-shirt crew", :style => "display: block", lazy: true, :alt => "") %>
+                  <% end %>
+                </a>
+              </div>
+              <div style="display:inline; float:left;">
+                <% if @names[i].include? "#"%>
+                    <h3 class="hashtag"><%= @names[i] %></h3>
+                <% else %>
+                    <h3><%= @names[i] %></h3>
+                <%end%>
+                <p>35 USD</p>
+              </div>
+              <div class="select-container-shop" style="display:inline; float:right">
+                <div id="btn-wrap">
+                  <div class="select design3 designBtn" style="float:right"></div>
+                  <div class="sf-su-response sf-popup-panel popup">
+                    <div class="select design1" style="margin-right:10px"></div>
+                    <div class="select design2" style="margin-right:10px"></div>
+                    <div class="select design3" style="margin-right:0px"></div>
+                  </div>
+                </div>
+
+                <div id="btn-wrap">
+                  <%if r == 1 %>
+                      <div class="select color white colorBtn" style="float:right"></div>
+                  <%elsif r == 2 %>
+                      <div class="select color black colorBtn" style="float:right"></div>
+                  <%elsif r == 3 %>
+                      <div class="select color gray colorBtn" style="float:right"></div>
+                  <% end %>
+                  <div class="sf-su-response sf-popup-panel popup">
+                    <div class="select color white" style="margin-right:10px"></div>
+                    <div class="select color gray" style="margin-right:10px"></div>
+                    <div class="select color black" style="margin-right:0px"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <% i = i + 1 %>
+      <% end %>
+    </div>
+  </div>
+</div>

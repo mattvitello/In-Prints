@@ -1,0 +1,574 @@
+
+.lazy {
+  display: none;
+}
+
+//sidebar menu
+.shop-menu{
+  margin: 1.5rem auto 0 1.5rem;
+  padding:0px;
+}
+.shop-menu-item{
+  font-size: 10px;
+  font-style: normal;
+  line-height:15.5px;
+  list-style: none;
+  a:hover{
+    color: #9ea6b1;
+  }
+}
+.shop-menu-item.active{
+  a{
+    color: #9ea6b1;
+  }
+}
+
+//sidebar sorting section
+#sidebar-sort{
+  margin-top:3rem;
+  margin-left:1.5rem;
+
+  .ui.selection.dropdown{
+    min-width: 7em;
+    line-height: 0em;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    min-height:0px;
+    padding: 0.6em 2.1em 0.6em 0.6em;
+    border-radius:0rem;
+
+    .default.text, .item, .text{
+      font-size: 10px;
+      font-style: normal;
+      line-height: 15.5px;
+      list-style: none;
+    }
+    .menu{
+      .item{
+        padding: 0.6rem 0.6rem !important;
+      }
+    }
+
+    .dropdown.icon{
+      padding:0.6em;
+    }
+  }
+  .ui.selection.active.dropdown .menu{
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+//shirt colors
+.black-shirt, .gray-shirt{
+  //display: none !important;
+}
+
+//Merchandise display
+.item-container {
+  float: left;
+  width: 100%;
+  padding-top: 1.1rem;
+  margin-bottom: 2rem;
+  border: 0;
+  .merchitem {
+    height: 350px;
+    width: 100%;
+    background-color: #f2f2f2;
+    margin-bottom: 12px;
+    position:relative;
+    a{
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    .text-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 105px;
+      margin: auto;
+      overflow: hidden;
+      .shirt-text {
+        font-weight: 300;
+        font-size: 0.9em;
+        color: rgba(0, 0, 0, 0.62);
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .shirt-hashtag {
+        font-weight: 300;
+        font-size: 7.5px;
+        color: rgba(0, 0, 0, 0.62);
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+  .hashtag{
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    letter-spacing: .4px;
+    font-size:10px;
+    line-height: 15.5px;
+    text-transform: none;
+  }
+  h3{
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    letter-spacing: .4px;
+    font-size:10px;
+    line-height: 15.5px;
+    text-transform: uppercase;
+  }
+  p{
+    font-size: 10px;
+    font-style: normal;
+    line-height: 15.5px;
+    margin-bottom: 0em;
+    font-weight: normal;
+    letter-spacing: .4px;
+  }
+}
+
+//shirt and text over shirt formatting based on screen size
+
+@media (min-width: 0px) {
+  .merchitem {
+    height: 125px !important;
+    a {
+      .tee {
+        width: 100px;
+        padding-top: 16px;
+      }
+      .crew{
+        width:80px;
+        padding-top: 13px;
+      }
+    }
+  }
+  .iblock {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+  .shop-items {
+    max-width: 100%;
+    .row {
+      padding-left: 31px;
+    }
+  }
+  .shop-menu-item{
+    display: inline;
+    padding-right: 10px;
+    margin-bottom: 0.5rem;
+  }
+  .shop-sidebar {
+    .shop-menu {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    #menu2{
+      margin-top:0.5rem;
+    }
+    #sidebar-sort{
+      display:inline-block;
+      margin-top:0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 330px) {
+  .merchitem {
+    height: 140px !important;
+    a {
+      .tee {
+        width: 120px;
+        padding-top: 17px;
+      }
+      .crew{
+        width:95px;
+        padding-top: 17px;
+      }
+    }
+  }
+}
+
+@media (min-width: 370px) {
+  .merchitem {
+    height: 170px !important;
+    a {
+      .tee {
+        width: 140px;
+        padding-top: 24px;
+      }
+      .crew{
+        width:110px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 430px) {
+  .merchitem {
+    height: 200px !important;
+    a {
+      .tee {
+        width: 160px;
+        padding-top: 30px;
+      }
+      .crew{
+        width:120px;
+        padding-top: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: 470px) {
+  .merchitem {
+    height: 220px !important;
+    a {
+      .tee {
+        width: 180px;
+        padding-top: 32px;
+      }
+      .crew{
+        width:140px;
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 520px) {
+  .merchitem {
+    height: 250px !important;
+    a {
+      .tee {
+        width: 200px;
+        padding-top: 34px;
+      }
+      .crew{
+        width:160px;
+        padding-top: 27px;
+      }
+    }
+  }
+}
+
+@media (min-width: 630px) {
+  .merchitem {
+    height: 280px !important;
+    a {
+      .tee {
+        width: 220px;
+        padding-top: 36px;
+      }
+      .crew{
+        width:180px;
+        padding-top: 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  .merchitem {
+    height: 310px !important;
+    a {
+      .tee {
+        width: 250px;
+        padding-top: 38px;
+      }
+      .crew{
+        width:210px;
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .shop-items{
+    max-width: 76%;
+    .row{
+      padding-left: 0px;
+    }
+  }
+  .shop-sidebar{
+    width: 166px;
+    max-width: none;
+    flex:none;
+    .shop-menu{
+      display:block;
+    }
+    #menu2{
+      margin-top:1.5rem;
+    }
+    #sidebar-sort{
+      display:block;
+      margin-top:3rem;
+      margin-bottom: 0px;
+    }
+  }
+
+  .shop-menu-item{
+    display: list-item;
+    padding-right:0px;
+    margin-bottom:0px;
+  }
+}
+
+
+
+  @media (min-width: 791px) {
+    .merchitem {
+      height: 350px !important;
+      a {
+        .tee {
+          width: 290px;
+          padding-top: 43px;
+        }
+        .crew{
+          width:250px;
+          padding-top: 30px;
+        }
+      }
+    }
+    .iblock{
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      max-width: 50%;
+      flex: 0 0 50%;
+      padding-right: 7px;
+      padding-left: 7px;
+    }
+    .shop-items{
+      max-width: 79%;
+    }
+  }
+
+@media (min-width: 830px) {
+  .shop-items{
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1010px) {
+
+  .shop-items{
+    max-width: 83% !important;
+  }
+}
+
+  @media (min-width: 1150px) {
+    .iblock{
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33%;
+        -ms-flex: 0 0 33.33%;
+        max-width: 33.33%;
+        flex: 0 0 33.33%;
+    }
+  }
+
+@media (min-width: 1300px) {
+
+  .shop-items{
+    max-width: 87% !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  .iblock{
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 25%;
+      -ms-flex: 0 0 25%;
+      max-width: 25%;
+      flex: 0 0 25%;
+  }
+}
+
+
+  //color selector bar
+  .color-container {
+    position: relative;
+    top: 9%;
+    left: 24%;
+    div {
+      width: 30px;
+      height: 15px;
+      border-radius: 1px;
+      cursor: pointer;
+    }
+    .white {
+      position: absolute;
+      top: 25%;
+      left: 5%;
+      background: #ffffff;
+    }
+
+    .gray {
+      position: absolute;
+      top: 25%;
+      left: 20%;
+      background: #cecfd0;
+    }
+
+    .black {
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      background: #000000;
+    }
+  }
+
+// Color / Design popup menu
+.clear {
+  clear:both;
+  display:block;
+}
+#btn-wrap {
+  position:relative;
+  float:right;
+  /* try any of these alternatives to float:right
+  margin-left:100px;
+  float:left;
+  */
+  /*Set the input/button container dimensions = button size*/
+  width: 35px;
+  height: 35px;
+}
+
+.sf-popup-panel {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 117px;
+}
+
+.sf-popup-panel.popup {
+  top: auto;
+  right: 0;
+  bottom: 100%;
+  left: auto;
+}
+
+.sf-popup-panel.popup.open:before {
+  position: absolute;
+  display: block;
+  content:" ";
+  border: 14px solid transparent;
+  border-top-color: #ccc;
+  top: 100%;
+  right: 3px;
+  left: auto;
+  width: 0px;
+  margin-left: -1px;
+}
+.sf-popup-panel.open:after {
+  position: absolute;
+  display: block;
+  content:" ";
+  border: 13px solid transparent;
+  border-top-color: white;
+  top: 100%;
+  right: 4px;
+  left: auto;
+  width: 0px;
+}
+
+.sf-popup-panel.open {
+  display: block;
+}
+
+.sf-su-response {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+//color selector bar
+.select-container-shop{
+  position: relative;
+
+  .select {
+    width: 25px;
+    height: 25px;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-right:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+
+    cursor:pointer;
+
+    border:1px solid white;
+    outline:1px solid #b3b4b5;
+
+
+  }
+  .select:hover{
+    outline:1px solid black;
+  }
+  .white {
+    float:left;
+    background: #ffffff;
+  }
+
+  .gray {
+    float:left;
+    background: #cecfd0;
+  }
+
+  .black {
+    float:left;
+    background: #000000;
+  }
+
+  .design1{
+    background: linear-gradient(red, yellow); /* Standard syntax */
+
+    float:left;
+  }
+
+  .design2{
+    background: linear-gradient(#2990ff, #db5bff); /* Standard syntax */
+
+    float:left;
+  }
+
+  .design3{
+    background: linear-gradient(#1fcc43, #f2f129); /* Standard syntax */
+
+    float:left;
+  }
+
+  .design4{
+    background: linear-gradient(#0a4dff, #55cdf2); /* Standard syntax */
+
+    float:left;
+  }
+}

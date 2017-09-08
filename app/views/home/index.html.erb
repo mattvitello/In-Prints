@@ -1,0 +1,72 @@
+<%= javascript_include_tag 'jquery'%>
+<%= javascript_include_tag 'home'%>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6 col-sm-3 col-md-2 home-menu">
+      <a href="/top"><span class="home-menu-item">SHIRTS</span></a>
+    </div>
+    <div class="col-6 col-sm-3 col-md-2 home-menu">
+      <a href="/top/sweatshirts"><span class="home-menu-item">SWEATSHIRTS</span></a>
+    </div>
+    <div class="col-6 col-sm-3 col-md-2 home-menu">
+      <a href="/top/hats"><span class="home-menu-item">HATS</span></a>
+    </div>
+    <div class="col-6 col-sm-3 col-md-2 home-menu">
+      <a href="/top/wallart"><span class="home-menu-item">WALL ART</span></a>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-sm-12">
+      <div class="item-container home-container hot-home-container">
+          <div class="homeitem">
+            <a class="shirt-img">
+              <%= image_tag("/images/#{@hotname}/shirts/w1.png", :class => "white-shirt tee", :style => "display: block") %>
+            </a>
+          </div>
+        <a href="/hot"><span class="home-menu-item">HOT TRENDS</span></a>
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="item-container home-container new-home-container">
+        <div class="homeitem">
+          <a class="shirt-img">
+            <%= image_tag("/images/#{@newname}/hoodies/g1.png", :class => "gray-shirt crew", :style => "display: block") %>
+          </a>
+        </div>
+        <a href="/new"><span class="home-menu-item">NEW TRENDS</span></a>
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="item-container home-container top-home-container">
+        <div class="homeitem">
+          <a class="shirt-img">
+            <%= image_tag("/images/#{@topname}/crewnecks/b1.png", :class => "black-shirt crew", :style => "display: block") %>
+          </a>
+        </div>
+        <a href="/top"><span class="home-menu-item">TOP TRENDS</span></a>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin-top:5px; margin-bottom:36px;">
+
+  <div class="row justify-content-center" class="tweet-feed" style="min-height:100px;padding-top:10px; overflow:hidden;">
+    <div class="col-12">
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+    </div>
+    </div>
+  </div>
+  <a><span class="feed-title">TWEET TREATS</span></a>
+
+
+</div>
+
+<script>
+
+</script>

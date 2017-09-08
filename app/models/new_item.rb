@@ -1,0 +1,3 @@
+class NewItem < ApplicationRecord
+
+end
